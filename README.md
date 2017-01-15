@@ -1,10 +1,10 @@
-# Arch + i3 windows manager
+# Arch Budgie + i3 windows manager
 
 This is my configuration for I3 improved tiling to be used on any archlinux distribution.
 
 In the installation folder is all the data, explanations and scripts for you to have a great working environment but not directly a desktop environment.
 
-I do not work with a display manager. Xorg and I3 provide all the display you will ever need.
+I started with Arch linux and Budgie desktop and gdm.
 
 I suggest you read up to better understand what a tiling window manager is.
 
