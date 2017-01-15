@@ -45,7 +45,7 @@ load {
 }
 
 ## CPU temperature sensor
-cpu_temperature 0 {
+cpu_temperature 1 {
     format = "T: %degrees °C"
 }
 

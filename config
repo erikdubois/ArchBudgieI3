@@ -470,12 +470,12 @@ bindsym mod1+f exec variety -f
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/.i3/scripts/i3exit.sh lock, mode "default"
-    bindsym e exec --no-startup-id ~/.i3/scripts/i3exit.sh logout, mode "default"
-    bindsym s exec --no-startup-id ~/.i3/scripts/i3exit.sh suspend, mode "default"
-    bindsym h exec --no-startup-id ~/.i3/scripts/i3exit.sh hibernate, mode "default"
-    bindsym r exec --no-startup-id ~/.i3/scripts/i3exit.sh reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id ~/.i3/scripts/i3exit.sh shutdown, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
+    bindsym e exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id ~/config/.i3/scripts/i3exit.sh shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -540,8 +540,9 @@ exec unclutter
 bar {
     workspace_buttons yes
     # you need to make a link from root to the config file in .i3 - see installation folder
-    status_command i3blocks 
-    #status_command i3status --config ~/.i3/i3status 
+    # ln -s ~/.config/i3/.i3blocks.conf ~/.i3blocks.conf
+    status_command i3blocks
+    #status_command i3status --config ~/.config/i3/i3status 
     # font pango:DroidSansMono 13
     font pango:Noto Sans 14
     #you can change the place via xrandr
@@ -670,5 +671,5 @@ smart_borders on
 ###########################################################################
 
 #if you want dimming on non-focused windows
-exec_always compton -b --config ~/.i3/compton.conf
+exec_always compton -b --config ~/.config/i3/compton.conf
 
