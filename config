@@ -319,15 +319,17 @@ bindsym $mod+Shift+agrave move container to workspace 10
 # Assign application to start on a specific workspace
 # you can find the class with the program xprop
 
-assign [class="Firefox"]        					→ 1
-assign [class="sublime-text|sublime_text|Sublime_text"]    		→ 2
-assign [class="Xed|xed|Brackets"] 					→ 2
-assign [class="Inkscape"]         					→ 3
-assign [class="Gimp"]             					→ 4
-assign [class="Vlc|vlc"]          					→ 7
-assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]			→ 8
-assign [class="Geary|Evolution"]      					→ 9
-assign [class="Spotify|spotify"]       					→ 10
+assign [class="Firefox|Vivaldi-stable|Opera"]                                       → 1
+assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]       → 2
+assign [class="Xed|xed|Brackets|Atom|Code"] 					                    → 2
+assign [class="Inkscape"]                                                           → 3
+assign [class="Gimp"]                                                               → 4
+assign [class="ristretto|Ristretto|shotwell|Shotwell"]                              → 5
+assign [class="feh|gthumb|Gthumb|eog|Eog|Pinta|pixeluvo|Pixeluvo"]                  → 5
+assign [class="Vlc|vlc"]                                                            → 7
+assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
+assign [class="Geary|Evolution"]                                                    → 9
+assign [class="Spotify|spotify"]                                                    → 10
 #fix for spotify not moving to workspace 10
 for_window [class="Spotify"] move to workspace 10
 
