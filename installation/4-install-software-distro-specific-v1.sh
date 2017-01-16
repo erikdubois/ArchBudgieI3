@@ -37,6 +37,7 @@ sudo pacman -S qt4 --confirm --needed
 sudo pacman -S xorg-xrandr --confirm --needed
 sudo pacman -S gvfs  --confirm --needed
 sudo pacman -S compton  --confirm --needed
+sudo pacman -S volumeicon  --confirm --needed
 #sudo pacman -S gnome-terminal  --noconfirm --needed
 #Printer
 
