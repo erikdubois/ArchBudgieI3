@@ -236,7 +236,7 @@ copy/paste this command in your terminal.
 # Youtube Resources
 
 
-https://www.youtube.com/playlist?list=PLlloYVGq5pS5DGx2EHIZxOGVTf9JikalO
+https://www.youtube.com/playlist?list=PLlloYVGq5pS4iLBVGkYnL4sqMmm08W5WT
 
 
 
@@ -300,7 +300,7 @@ Disadvantages
 
 And remember if you start from this github, your learning curve will be much steeper and you will have the system up and running much faster.
 
-Then you take it apart and write your own code.
+Then you take it the config apart and write your codes.
 
 
 
