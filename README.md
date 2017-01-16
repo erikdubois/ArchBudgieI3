@@ -70,7 +70,10 @@ There are other scripts for more applications. If needed, you can install them i
 ##Change the theme
 
 Sometimes you can change the present theme to its dark equivalent. This is the case in Gnome/Budgie. 
-In the gnome-tweak-tool you can change this.
+In the gnome-tweak-tool you can change this. Here we will have to do this with 
+
+    lxappearance and qtconfig-qt4.
+    
 
 ##Install Arc Theme
 
