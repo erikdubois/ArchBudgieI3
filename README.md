@@ -41,7 +41,7 @@ Go inside the installation folder.
  
     _0-install-arch-i3-mirrors-vx - if you want the fastest servers - change countries
     _0-install-xorg-vx.sh - if you have a base system without xserver
-    0-install-packer-for-aur-make-build-v1  - if you do not have packer installed
+    0-install-packer-for-aur-make-build-v1  - if you do not have packer installed for AUR
     0-install-i3-core-vx.sh - install standard i3 and afterward i3 with gaps
     1-install-core-software-vx.sh
     2-install-extra-software-vx.sh
