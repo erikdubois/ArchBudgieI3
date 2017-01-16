@@ -9,6 +9,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+
 # Specifics about this config
 # Intended to work on xorg directly
 # no gnome, kde, xfce, openbox, cinnamon, mate, fluxbox, and any others
