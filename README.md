@@ -181,6 +181,7 @@ I like the breeze cursors.
     
 ##Install the plank and download 100+ themes
 
+NOT RELEVANT for i3wm. I leave it in for general information.
 
 Plank is installed via the main scripts.
 
