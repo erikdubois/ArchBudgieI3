@@ -69,7 +69,7 @@ There are other scripts for more applications. If needed, you can install them i
 
 ##Change the theme
 
-Sometimes you can change the present theme to its dark equivalent. This is the case in Gnome. 
+Sometimes you can change the present theme to its dark equivalent. This is the case in Gnome/Budgie. 
 In the gnome-tweak-tool you can change this.
 
 ##Install Arc Theme
@@ -107,7 +107,7 @@ You can also use
     - yaourt -S sardi-icons 
 
 
-![Screenshots](http://i.imgur.com/5gXeRId.jpg)
+![Screenshots](http://i.imgur.com/CUj0D3G.jpg)
 
 
 Sardi is **meant to be changed by the users**. You can use scripts to change the hexadecimal colour code in about 3 seconds.
@@ -130,7 +130,7 @@ https://github.com/erikdubois/Sardi-Extra
 
 These icons can be downloaded but will not be maintained. Nor are they part of the core icons of Sardi. They are the result of ideas and scripts that are included in Sardi icons.
 
-![Screenshots](http://i.imgur.com/ADYgJom.jpg)
+![Screenshots](http://i.imgur.com/sPo65Pi.jpg)
 
 More documentation on http://erikdubois.be/category/sardi-icons/
 
