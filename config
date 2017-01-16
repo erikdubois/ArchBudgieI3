@@ -411,8 +411,7 @@ bindsym control+mod1+t exec gnome-terminal; focus
 #bindsym control+mod1+t exec terminator; focus
 #bindsym control+mod1+t exec mate-terminal; focus
 #bindsym control+mod1+t exec xfce4-terminal; focus
-bindsym control+mod1+n exec cinnamon-settings
-bindsym control+mod1+t exec gnome-terminal;focus
+#bindsym control+mod1+n exec cinnamon-settings
 #bindsym control+mod1+Delete exec xfce4-taskmanager;focus
 #bindsym control+Shift+Escape exec xfce4-taskmanager;focus
 #bindsym control+mod1+q exec xfce4-taskmanager;focus
