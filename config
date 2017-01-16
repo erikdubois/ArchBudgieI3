@@ -9,7 +9,6 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-
 # Specifics about this config
 # Intended to work on xorg directly
 # no gnome, kde, xfce, openbox, cinnamon, mate, fluxbox, and any others
@@ -216,7 +215,8 @@ font pango:DejaVu Sans Mono 12
 
 # personal preference for tuning the look
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec terminator;focus
+#bindsym $mod+Return exec terminator;focus
+bindsym $mod+Return exec gnome-terminal;focus
 
 
 ################### MENU ######################
@@ -335,11 +335,13 @@ exec_always --no-startup-id numlockx on
 #exec volumeicon
 exec pasystray
 exec variety
-#exec pamac-tray
+exec pamac-tray
 exec --no-startup-id blueman-applet
 exec dropbox start
 exec gnome-settings-daemon
 exec clipit
+#exec --no-startup-id /usr/lib/polkit-1/polkit-agent-helper-1 &
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # USER APPLICATIONS
 
@@ -376,7 +378,8 @@ bindsym $mod+F10 exec spotify;workspace 10;focus
 
 
 bindsym control+mod1+c exec catfish;focus
-bindsym control+mod1+t exec terminator;focus
+#bindsym control+mod1+t exec terminator;focus
+bindsym control+mod1+t exec gnome-terminal;focus
 bindsym control+mod1+Delete exec xfce4-taskmanager;focus
 bindsym control+Shift+Escape exec xfce4-taskmanager;focus
 bindsym control+mod1+q exec xfce4-taskmanager;focus
