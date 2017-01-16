@@ -37,7 +37,7 @@ This folder contains all the settings you will ever need for your i3wm.
 ##Software installation
 
 We start the installation scripts of all the needed software via the terminal.
-Go inside the installation folder.
+Go inside the installation folder and run these or even more.
  
     _0-install-arch-i3-mirrors-vx - if you want the fastest servers - change countries
     _0-install-xorg-vx.sh - if you have a base system without xserver
