@@ -25,7 +25,7 @@ The idea is to download the i3 github files :
 The content of this folder should be copied to a hidden folder in your home directory with the name  ~/.config/i3. Create it when it does not exist
 
     mkdir ~/.config/i3
-    cp -r Archi3/ ~/.config/i3
+    cp -r ArchBudgieI3/ ~/.config/i3
 
 Be sure to copy all the hidden files too!
 
