@@ -149,7 +149,7 @@ You can also use
     - yaourt -S surfn-icons 
 
 
-![Screenshots](http://i.imgur.com/UWX8NYi.jpg)
+![Screenshots](http://i.imgur.com/BoacWMK.jpg)
 
 
 
