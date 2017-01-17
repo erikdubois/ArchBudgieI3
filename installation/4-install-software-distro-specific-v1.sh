@@ -34,11 +34,11 @@ sudo pacman -S notify-osd  --noconfirm --needed
 sudo pacman -S lxappearance --noconfirm --needed
 sudo pacman -S feh --noconfirm --needed
 sudo pacman -S qt4 --confirm --needed
-sudo pacman -S xorg-xrandr --confirm --needed
-sudo pacman -S gvfs  --confirm --needed
-sudo pacman -S compton  --confirm --needed
-sudo pacman -S volumeicon  --confirm --needed
-sudo packer -S arandr  --confirm --needed
+sudo pacman -S xorg-xrandr --noconfirm --needed
+sudo pacman -S gvfs  --noconfirm --needed
+sudo pacman -S compton  --noconfirm --needed
+sudo pacman -S volumeicon  --noconfirm --needed
+sudo packer -S arandr  --noconfirm --needed
 #sudo pacman -S gnome-terminal  --noconfirm --needed
 #Printer
 
@@ -73,16 +73,109 @@ echo "################################################################"
 echo "playerctl"
 echo "################################################################"
 
-packer -S playerctl --noedit --noconfirm
+package="playerctl"
+
+#----------------------------------------------------------------------------------
+
+#checking if application is already installed or else install with aur helpers
+if pacman -Qi $package &> /dev/null; then
+
+	echo "################################################################"
+	echo "################## "$package" is already installed"
+	echo "################################################################"
+
+else
+
+	#checking which helper is installed
+	if pacman -Qi packer &> /dev/null; then
+
+		echo "Installing with packer"
+		packer -S --noconfirm --noedit  $package
+
+	elif pacman -Qi pacaur &> /dev/null; then
+		
+		echo "Installing with pacaur"
+		pacaur -S --noconfirm --noedit  $package
+		 	
+	elif pacman -Qi yaourt &> /dev/null; then
+
+		echo "Installing with yaourt"
+		yaourt -S --noconfirm $package
+			  	
+	fi
+
+	# Just checking if installation was successful
+	if pacman -Qi $package &> /dev/null; then
+	
+	echo "################################################################"
+	echo "#########  "$package" has been installed"
+	echo "################################################################"
+
+	else
+
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!  "$package" has NOT been installed"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+	fi
+
+fi
 
 echo "################################################################"
 echo "trayicon for bluetooth headphone"
 echo "################################################################"
 
 
-packer -S pasystray-git --noedit --noconfirm
-# go to tmp file and run there
-# sudo pacman -U /tmp/packerbuild-1000/pasystray-git/pasystray-git/pasystray-git-0.6.0.r13.gccb5b6e-1-x86_64.pkg.tar.xz 
+package="pasystray-git"
+
+#----------------------------------------------------------------------------------
+
+#checking if application is already installed or else install with aur helpers
+if pacman -Qi $package &> /dev/null; then
+
+	echo "################################################################"
+	echo "################## "$package" is already installed"
+	echo "################################################################"
+
+else
+
+	#checking which helper is installed
+	if pacman -Qi packer &> /dev/null; then
+
+		echo "Installing with packer"
+		packer -S --noconfirm --noedit  $package
+
+	elif pacman -Qi pacaur &> /dev/null; then
+		
+		echo "Installing with pacaur"
+		pacaur -S --noconfirm --noedit  $package
+		 	
+	elif pacman -Qi yaourt &> /dev/null; then
+
+		echo "Installing with yaourt"
+		yaourt -S --noconfirm $package
+			  	
+	fi
+
+	# Just checking if installation was successful
+	if pacman -Qi $package &> /dev/null; then
+	
+	echo "################################################################"
+	echo "#########  "$package" has been installed"
+	echo "################################################################"
+
+	else
+
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!  "$package" has NOT been installed"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+	fi
+
+fi
+
+echo "To install pasytray, go to tmp file and run from there"
+echo "sudo pacman -U /tmp/packerbuild-1000/pasystray-git/pasystray-git/pasystray-git-0.6.0.r13.gccb5b6e-1-x86_64.pkg.tar.xz"
 
 
 ###############################################################
@@ -126,10 +219,6 @@ packer -S pasystray-git --noedit --noconfirm
 # https://github.com/sivel/speedtest-cli
 
         
-        # S M A R T G I T #
-        
-# packer smartgit
-
 
         # B U R N   I S O  T O   U S B #
 
