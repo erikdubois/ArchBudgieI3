@@ -33,6 +33,7 @@ sudo pacman -S gnome-disk-utility  --noconfirm --needed
 sudo pacman -S notify-osd  --noconfirm --needed
 sudo pacman -S lxappearance --noconfirm --needed
 sudo pacman -S feh --noconfirm --needed
+sudo pacman -S arandr --noconfirm --needed
 sudo pacman -S qt4 --confirm --needed
 sudo pacman -S xorg-xrandr --noconfirm --needed
 sudo pacman -S gvfs  --noconfirm --needed
