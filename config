@@ -213,6 +213,8 @@ font pango:Noto Mono Regular 13
 # copy/paste one time in terminal
 # to figure out settins install dconf-editor
 # gsettings set org.cinnamon.desktop.default-applications.terminal exec /usr/bin/terminator
+$ gsettings set org.gnome.desktop.default-applications.terminal exec gnome-terminal
+
 
 
 # personal preference for tuning the look
