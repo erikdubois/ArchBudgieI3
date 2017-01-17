@@ -15,36 +15,48 @@
 program="dropbox"
 command="dropbox"
 
+#----------------------------------------------------------------------------------
 
-if which pacaur > /dev/null; then
+#checking if application is already installed or else install with aur helpers
+if which $command  &> /dev/null; then
 
-	echo "Installing with pacaur"
-	pacaur -S --noconfirm --noedit  $program
+	echo "################################################################"
+	echo "################## "$command" is already installed"
+	echo "################################################################"
 
-elif which packer > /dev/null; then
+else
 
-	echo "Installing with packer"
-	packer -S --noconfirm --noedit  $program 	
+	#choosing which aur helper to take
+	if which packer &> /dev/null; then
 
-elif which yaourt > /dev/null; then
+		echo "Installing with packer"
+		packer -S --noconfirm --noedit  $program
 
-	echo "Installing with yaourt"
-	yaourt -S --noconfirm $program
-		  	
-fi
+	elif which pacaur &> /dev/null; then
+		
+		echo "Installing with pacaur"
+		pacaur -S --noconfirm --noedit  $program
+		 	
+	elif which yaourt &> /dev/null; then
 
+		echo "Installing with yaourt"
+		yaourt -S --noconfirm $program
+			  	
+	fi
 
-
-if which $command > /dev/null; then
+	# Just checking if installation was successful
+	if pacman -Qi $command &> /dev/null; then
 	
 	echo "################################################################"
-	echo "################################## "$command" has been installed"
+	echo "#########  "$command" has been installed"
 	echo "################################################################"
 
 	else
 
 	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! "$command" has NOT been installed"
+	echo "!!!!!!!!!  "$command" has NOT been installed"
 	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+	fi
 
 fi

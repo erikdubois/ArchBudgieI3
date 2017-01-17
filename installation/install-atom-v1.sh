@@ -12,10 +12,8 @@
 ##################################################################################################################
 
 
-program="brackets"
-command="brackets"
-
-#----------------------------------------------------------------------------------
+program="atom"
+command="atom"
 
 #checking if application is already installed or else install with aur helpers
 if which $command  &> /dev/null; then
@@ -27,16 +25,16 @@ if which $command  &> /dev/null; then
 else
 
 	#choosing which aur helper to take
-	if which packer &> /dev/null; then
+	if which pacaur &> /dev/null; then
 
-		echo "Installing with packer"
-		packer -S --noconfirm --noedit  $program
-
-	elif which pacaur &> /dev/null; then
-		
 		echo "Installing with pacaur"
 		pacaur -S --noconfirm --noedit  $program
-		 	
+
+	elif which packer &> /dev/null; then
+
+		echo "Installing with packer"
+		packer -S --noconfirm --noedit  $program 	
+
 	elif which yaourt &> /dev/null; then
 
 		echo "Installing with yaourt"
@@ -45,7 +43,7 @@ else
 	fi
 
 	# Just checking if installation was successful
-	if pacman -Qi $command &> /dev/null; then
+	if which $command &> /dev/null; then
 	
 	echo "################################################################"
 	echo "#########  "$command" has been installed"
