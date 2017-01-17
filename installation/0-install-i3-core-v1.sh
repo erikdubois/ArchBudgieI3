@@ -54,7 +54,7 @@ echo "################################################################"
 
 # i3 with gaps between windows
 
-packer -S i3-gaps-next-git --noedit
+packer -S i3-gaps-next-git --noedit --noconfirm
 
 
 echo "################################################################"
