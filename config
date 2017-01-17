@@ -248,8 +248,8 @@ bindsym $mod+shift+d exec j4-dmenu-desktop --dmenu="dmenu -fn 'DroidSansMono:bol
 # xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
 
 # my current setup
-set $firstMonitor DVI-I-2
-set $secondMonitor DVI-I-1
+set $firstMonitor DVI-I-1
+set $secondMonitor DVI-I-2
 
 #set $firstMonitor DVI-I-2
 #set $secondMonitor VGA-0
