@@ -342,7 +342,7 @@ for_window [class="Spotify"] move to workspace 10
 # num lock activated
 exec_always --no-startup-id numlockx on
 # network
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 exec network-manager-applet
 # dropbox
 exec dropbox start
@@ -351,15 +351,12 @@ exec insync start
 # volume
 exec pasystray
 #exec volumeicon
-exec pasystray
 #variety
 exec variety
 # update
 exec pamac-tray
 # bluetooth
 exec --no-startup-id blueman-applet
-# settings
-exec gnome-settings-daemon
 # clipit
 exec clipit
 #Authentication dialog
