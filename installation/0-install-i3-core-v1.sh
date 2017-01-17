@@ -36,7 +36,7 @@ echo "################################################################"
 echo "dmenu-xft for bigger fonts - Remove dmenu -- yes"
 echo "################################################################"
 
-packer -S dmenu-xft-mouse-height-fuzzy-history --noedit
+packer -S dmenu-xft-mouse-height-fuzzy-history --noedit --noconfirm
 
 # alternative information bar
 
