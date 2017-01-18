@@ -490,28 +490,15 @@ exec pasystray
 #exec volumeicon
 #variety
 exec variety
-# update
-#exec mintupdate-launcher
-exec pamac-tray
-# bluetooth
-#exec blueberry-tray
-exec --no-startup-id blueman-applet
+
 # clipit
 exec clipit
-#Authentication dialog
-# polkit-gnome
-#arch budgie
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-#exec --no-startup-id /usr/lib/polkit-1/polkit-agent-helper-1 &
-#Linux Mint
-#exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
 
 # USER APPLICATIONS
 
 exec firefox
 for_window [class="Firefox"] focus
-#exec subl
-exec subl3
 #exec evolution
 exec --no-startup-id spotify
 for_window [class="Spotify"] focus
@@ -524,6 +511,29 @@ for_window [class="Nemo"] focus
 #exec dunst -config ~/.config/i3/dunstrc
 #exec --no-startup-id evolution
 #exec --no-startup-id conky
+
+###########################################################
+################### DISTRO DEPENDENT ######################
+###########################################################
+
+#exec subl
+exec subl3
+
+#Authentication dialog
+# polkit-gnome
+#arch budgie
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#exec --no-startup-id /usr/lib/polkit-1/polkit-agent-helper-1 &
+#Linux Mint
+#exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+# update
+#exec mintupdate-launcher
+exec pamac-tray
+# bluetooth
+#exec blueberry-tray
+exec --no-startup-id blueman-applet
+
 
 
 ################### SHORTCUTS APPLICATIONS ######################
@@ -623,7 +633,7 @@ for_window [urgent=latest] focus
 ################### SCREENSHOTS ######################
 
 
-bindsym Print exec scrot 'Archlinux-Budgie-Sardi-Aureola-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 bindsym Control+Print exec gnome-screenshot -i
 
 
@@ -718,6 +728,7 @@ mode "$mode_system" {
 bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '5%+'"
 bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '5%-'"
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
+#https://github.com/acrisci/playerctl/
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -792,8 +803,8 @@ bar {
     # you will get the standard i3status bar
     # this is the standard statusbar with my personal settings
 
-#status_command i3status	
-#status_command i3status -c ~/.config/i3/i3status.conf
+#status_command i3status
+status_command i3status -c ~/.config/i3/i3status.conf
 
 
 # OPTION 2 : i3blocks
@@ -804,7 +815,7 @@ bar {
     # put hastag in front if not installed
 
 #status_command i3blocks
-#status_command i3blocks -c ~/.config/i3/i3blocks.conf
+status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
 
 # OPTION 3 : conky
@@ -815,7 +826,7 @@ bar {
     # documentation : https://i3wm.org/docs/user-contributed/conky-i3bar.html
     # conky configuration is in conky-i3statusbar
 	
-status_command ~/.config/i3/start-conky-i3statusbar.sh
+#status_command ~/.config/i3/start-conky-i3statusbar.sh
 
    
 colors {
