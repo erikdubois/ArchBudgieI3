@@ -962,10 +962,10 @@ bindsym control+Shift+Escape exec gnome-system-monitor;focus
 
 
 #workspace 2 related
-bindsym $mod+F2 exec subl;workspace 2;focus
-bindsym control+mod1+w exec subl;workspace 2;focus
-#bindsym $mod+F2 exec subl3;workspace 2;focus
-#bindsym control+mod1+w exec subl3;workspace 2;focus
+#bindsym $mod+F2 exec subl;workspace 2;focus
+#bindsym control+mod1+w exec subl;workspace 2;focus
+bindsym $mod+F2 exec subl3;workspace 2;focus
+bindsym control+mod1+w exec subl3;workspace 2;focus
 
 #workspace 8 related
 bindsym $mod+F8 exec nemo --no-desktop;workspace 8;focus
