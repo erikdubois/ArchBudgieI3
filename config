@@ -339,7 +339,6 @@ mode "resize" {
 # font pango:Sans 13
 # font pango:Noto Mono Regular 13
 # font pango:DroidSansMono 13
-
 font pango:Noto Mono Regular 13
 
 
@@ -499,10 +498,13 @@ exec pamac-tray
 exec --no-startup-id blueman-applet
 # clipit
 exec clipit
-#Authentication dialog 
+#Authentication dialog
 # polkit-gnome
+#arch budgie
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #exec --no-startup-id /usr/lib/polkit-1/polkit-agent-helper-1 &
+#Linux Mint
+#exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # USER APPLICATIONS
 
@@ -661,12 +663,12 @@ bindsym $mod+Pause mode "$mode_system"
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
-    bindsym e exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
-    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
-    bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
-    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/i3exit.sh lock, mode "default"
+    bindsym e exec --no-startup-id ~/.config/i3/i3exit.sh logout, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id ~/.config/i3/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/i3exit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id ~/.config/i3/i3exit.sh shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -738,7 +740,7 @@ exec unclutter
 
 ################### BAR APPEARANCE ######################
 
-        
+
 bar {
 
     height 25
