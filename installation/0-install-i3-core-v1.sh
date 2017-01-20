@@ -17,18 +17,71 @@ echo "################################################################"
 echo "i 3  improved tiling core files"
 echo "################################################################"
 
-sudo pacman -S --noconfirm --needed i3-wm i3lock i3status 
+if pacman -Qi i3-gaps-next-git &> /dev/null; then
 
+	echo "i3-gaps-next-git already installed"
+
+else 
+
+	sudo pacman -S --noconfirm --needed i3-wm i3lock i3status 
+
+fi
 
 ########        C O R E   i 3   A  U R    #########
 
 # alternative menu faster and only desktop apps
 
 echo "################################################################"
-echo "j4-dmenu-desktop-git"   
+echo "j4-dmenu-desktop"   
 echo "################################################################"
 
-packer -S j4-dmenu-desktop-git --noedit --noconfirm
+package="j4-dmenu-desktop"
+
+#----------------------------------------------------------------------------------
+
+#checking if application is already installed or else install with aur helpers
+if pacman -Qi $package &> /dev/null; then
+
+	echo "################################################################"
+	echo "################## "$package" is already installed"
+	echo "################################################################"
+
+else
+
+	#checking which helper is installed
+	if pacman -Qi packer &> /dev/null; then
+
+		echo "Installing with packer"
+		packer -S --noconfirm --noedit  $package
+
+	elif pacman -Qi pacaur &> /dev/null; then
+		
+		echo "Installing with pacaur"
+		pacaur -S --noconfirm --noedit  $package
+		 	
+	elif pacman -Qi yaourt &> /dev/null; then
+
+		echo "Installing with yaourt"
+		yaourt -S --noconfirm $package
+			  	
+	fi
+
+	# Just checking if installation was successful
+	if pacman -Qi $package &> /dev/null; then
+	
+	echo "################################################################"
+	echo "#########  "$package" has been installed"
+	echo "################################################################"
+
+	else
+
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!  "$package" has NOT been installed"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+	fi
+
+fi
 
 # alternative menu for i3 with larger fonts and font choice 
 
@@ -36,7 +89,54 @@ echo "################################################################"
 echo "dmenu-xft for bigger fonts - Remove dmenu -- yes"
 echo "################################################################"
 
-packer -S dmenu-xft-mouse-height-fuzzy-history --noedit --noconfirm
+package="dmenu-xft-mouse-height-fuzzy-history"
+
+#----------------------------------------------------------------------------------
+
+#checking if application is already installed or else install with aur helpers
+if pacman -Qi $package &> /dev/null; then
+
+	echo "################################################################"
+	echo "################## "$package" is already installed"
+	echo "################################################################"
+
+else
+
+	#checking which helper is installed
+	if pacman -Qi packer &> /dev/null; then
+
+		echo "Installing with packer"
+		packer -S --noconfirm --noedit  $package
+
+	elif pacman -Qi pacaur &> /dev/null; then
+		
+		echo "Installing with pacaur"
+		pacaur -S --noconfirm --noedit  $package
+		 	
+	elif pacman -Qi yaourt &> /dev/null; then
+
+		echo "Installing with yaourt"
+		yaourt -S --noconfirm $package
+			  	
+	fi
+
+	# Just checking if installation was successful
+	if pacman -Qi $package &> /dev/null; then
+	
+	echo "################################################################"
+	echo "#########  "$package" has been installed"
+	echo "################################################################"
+
+	else
+
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!  "$package" has NOT been installed"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+	fi
+
+fi
+
 
 # alternative information bar
 
@@ -44,7 +144,53 @@ echo "################################################################"
 echo "i3 blocks"
 echo "################################################################"
 
-packer -S i3blocks --noedit --noconfirm
+package="i3blocks"
+
+#----------------------------------------------------------------------------------
+
+#checking if application is already installed or else install with aur helpers
+if pacman -Qi $package &> /dev/null; then
+
+	echo "################################################################"
+	echo "################## "$package" is already installed"
+	echo "################################################################"
+
+else
+
+	#checking which helper is installed
+	if pacman -Qi packer &> /dev/null; then
+
+		echo "Installing with packer"
+		packer -S --noconfirm --noedit  $package
+
+	elif pacman -Qi pacaur &> /dev/null; then
+		
+		echo "Installing with pacaur"
+		pacaur -S --noconfirm --noedit  $package
+		 	
+	elif pacman -Qi yaourt &> /dev/null; then
+
+		echo "Installing with yaourt"
+		yaourt -S --noconfirm $package
+			  	
+	fi
+
+	# Just checking if installation was successful
+	if pacman -Qi $package &> /dev/null; then
+	
+	echo "################################################################"
+	echo "#########  "$package" has been installed"
+	echo "################################################################"
+
+	else
+
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!  "$package" has NOT been installed"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+	fi
+
+fi
 
 
 echo "################################################################"
@@ -54,8 +200,53 @@ echo "################################################################"
 
 # i3 with gaps between windows
 
-packer -S i3-gaps-next-git --noedit 
+package="i3-gaps-next-git"
 
+#----------------------------------------------------------------------------------
+
+#checking if application is already installed or else install with aur helpers
+if pacman -Qi $package &> /dev/null; then
+
+	echo "################################################################"
+	echo "################## "$package" is already installed"
+	echo "################################################################"
+
+else
+
+	#checking which helper is installed
+	if pacman -Qi packer &> /dev/null; then
+
+		echo "Installing with packer"
+		packer -S --noconfirm --noedit  $package
+
+	elif pacman -Qi pacaur &> /dev/null; then
+		
+		echo "Installing with pacaur"
+		pacaur -S --noconfirm --noedit  $package
+		 	
+	elif pacman -Qi yaourt &> /dev/null; then
+
+		echo "Installing with yaourt"
+		yaourt -S --noconfirm $package
+			  	
+	fi
+
+	# Just checking if installation was successful
+	if pacman -Qi $package &> /dev/null; then
+	
+	echo "################################################################"
+	echo "#########  "$package" has been installed"
+	echo "################################################################"
+
+	else
+
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!  "$package" has NOT been installed"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+	fi
+
+fi
 
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"

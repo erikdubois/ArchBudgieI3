@@ -21,12 +21,6 @@
 #
 #
 ##################################################################################################################
-#
-# Current project : Ultimate-Linux-Mint-18
-#
-# Source 	: 	https://github.com/erikdubois/Ultimate-Linux-Mint-18
-#
-##################################################################################################################
 # Written to be used on 64 bits computers
 # Author 	: 	Erik Dubois
 # Website 	: 	http://www.erikdubois.be
@@ -54,25 +48,18 @@
 # Check out the github - many more scripts for automatic installation of Linux Systems.
 #
 #
-#
-#
-#
-##################################################################################################################
-# If the option -y has been added. It will autoinstall all. Omit if you do not want that.
-##################################################################################################################
-#
-#
-#
-#
 ##################################################################################################################
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. AT YOUR OWN RISK.
 #
 ##################################################################################################################
 
-#stop firefox from saying well this is embarrasing -- stop restore of websites
 
-about:config
+gsettings set org.gnome.gnome-screenshot default-file-type png 
 
-browser.sessionstore.resume_from_crash  from true to false
-browser.sessionstore.max_resumed_crashes from 0 to 1
+echo
+echo
+echo "###############################"
+echo "All done"
+echo "###############################"
+sleep 5
