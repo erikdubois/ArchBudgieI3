@@ -11,9 +11,15 @@
 #
 ##################################################################################################################
 
+# Cursor theme
+
+sh install-breeze-cursor-theme-v1.sh
+
+###############################################################################################
+
 # Conky Aureola
 
-sh conky-aureola-v2.sh
+sh conky-aureola-v3.sh
 
 ###############################################################################################
 
@@ -35,9 +41,21 @@ sh icons-surfn-v2.sh
 
 ###############################################################################################
 
+# Arc Flatabulous theme
+
+sh install-gtk-arc-flatabulous-theme-v1.sh
+
+#############################################################################################
+
 # Arc theme
 
-sh install-gtk-arc-theme-v1.sh
+sh install-gtk-arc-theme-git-v1.sh
+
+#############################################################################################
+
+# Numix icons
+
+sh install-numix-circle-icon-theme-git-v1.sh
 
 #############################################################################################
 
@@ -47,11 +65,22 @@ sh plank-themes-v2.sh
 
 ###############################################################################################
 
-# Cursor theme
+# Carlito font
 
-sh install-breeze-cursor-theme-v1.sh
+sh install-ttf-carlito-v1.sh
+
+###############################################################################################
+
+# Mac lucida font
+
+sh install-ttf-mac-fonts-v1.sh
 
 
+#Fonts
+
+sudo pacman -S ttf-ubuntu-font-family --noconfirm --needed
+sudo pacman -S ttf-droid --noconfirm --noconfirm --needed
+sudo pacman -S ttf-inconsolata --noconfirm --needed
 
 
 echo "################################################################"

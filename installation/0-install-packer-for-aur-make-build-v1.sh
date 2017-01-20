@@ -24,7 +24,7 @@
 
 #dependencies for packer
 
-sudo pacman -S --noconfirm --needed grep sed bash curl pacman jshon expac
+sudo pacman -S --noconfirm --needed grep sed bash curl pacman jshon expac wget
 
 rm -rf /tmp/packer
 
@@ -36,7 +36,8 @@ mv PKGBUILD\?h\=packer /tmp/packer/PKGBUILD
 
 cd /tmp/packer
 
-makepkg -i /tmp/packer
+makepkg -i --needed --noconfirm /tmp/packer
+
 
 
 #sudo pacman -U /tmp/packer/packer-*.pkg.tar.xz

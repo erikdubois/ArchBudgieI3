@@ -21,11 +21,6 @@ sudo pacman -S --noconfirm --needed nemo
 sudo pacman -S alsa-utils alsa-plugins alsa-lib alsa-firmware pulseaudio pulseaudio-alsa pavucontrol  --noconfirm --needed
 sudo pacman -S gst-plugins-good gst-plugins-bad gst-plugins-base gst-plugins-ugly  gstreamer0.10-ffmpeg  --noconfirm --needed
 
-#Fonts
-
-sudo pacman -S ttf-ubuntu-font-family --noconfirm --needed
-sudo pacman -S ttf-droid --noconfirm --noconfirm --needed
-sudo pacman -S ttf-inconsolata --noconfirm --needed
 
 #Utilities
 
@@ -41,11 +36,7 @@ sudo pacman -S compton  --noconfirm --needed
 sudo pacman -S volumeicon  --noconfirm --needed
 sudo packer -S arandr  --noconfirm --needed
 #sudo pacman -S gnome-terminal  --noconfirm --needed
-#Printer
 
-sudo pacman -S cups cups-pdf ghostscript gsfonts libcups hplip system-config-printer --noconfirm --needed
-systemctl enable org.cups.cupsd.service
-systemctl start org.cups.cupsd.service
 
 #Network
 
@@ -55,6 +46,12 @@ sudo pacman -S networkmanager --noconfirm --needed
 # lan just works and gives no added value
 
 # sudo pacman -S network-manager-applet --noconfirm
+
+
+#Printer
+sudo pacman -S cups cups-pdf ghostscript gsfonts libcups hplip system-config-printer --noconfirm --needed
+systemctl enable org.cups.cupsd.service
+systemctl start org.cups.cupsd.service
 
 
 echo "################################################################"
