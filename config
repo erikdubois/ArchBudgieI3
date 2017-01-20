@@ -470,10 +470,7 @@ exec network-manager-applet
 exec dropbox start
 # insync
 exec insync start
-# volume
-exec pasystray
-#exec volti
-#exec volumeicon
+
 #variety
 exec variety
 
@@ -1032,3 +1029,8 @@ exec pamac-tray
 # bluetooth
 exec blueberry-tray
 #exec --no-startup-id blueman-applet
+
+# volume
+exec pasystray
+#exec volti
+#exec volumeicon
