@@ -121,7 +121,7 @@ conky.text = [[
       "separator": true,
       "separator_block_width": 0
     },
-        {
+    {
       "full_text": "  ${time %H:%M:%S} ",
       "color": "\#fdf6e3",
       "background": "\#6c71c4",
