@@ -11,7 +11,17 @@
 #
 ##################################################################################################################
 
+sudo pacman -S --needed --noconfirm xdg-user-dirs
 
+# if there is already a folder, delete or else do nothing
+
+echo "The script will install itself in the /tmp/hardcode-fixer folder"
+echo "It will run from there"
+echo "Upon next boot the tmp folder will be empty again"
+echo "#################################################"
+
+
+[ -d /tmp/hardcode-fixer ] && rm -rf "/tmp/hardcode-fixer" || echo ""
 
 
 echo "################################################################"
@@ -35,25 +45,39 @@ echo "Install git for an easy installation"
 		  	
 	fi
 
-
-rm -rf /tmp/Plank-Themes
-
-git clone https://github.com/erikdubois/Plank-Themes /tmp/Plank-Themes
-find /tmp/Plank-Themes -maxdepth 1 -type f -exec rm -rf '{}' \;
-
-# if there is no hidden folder then make one
-[ -d $HOME"/.local/share/plank" ] || mkdir -p $HOME"/.local/share/plank"
-
-# if there is no hidden folder then make one
-[ -d $HOME"/.local/share/plank/themes" ] || mkdir -p $HOME"/.local/share/plank/themes"
-
-
-cp -r /tmp/Plank-Themes/* ~/.local/share/plank/themes/
-
-rm -rf /tmp/Plank-Themes
-
-
+git clone https://github.com/Foggalong/hardcode-fixer /tmp/hardcode-fixer
 
 echo "################################################################"
-echo "###################        plank themes installed   ############"
+echo "Checking if curl is installed"
+echo "Install curl for an easy installation"
+
+
+	# curl
+
+	# check if curl is installed
+	if which curl > /dev/null; then
+		echo "curl was installed. Proceding..."
+
+		else
+
+		echo "################################################################"
+		echo "installing curl for this script to work"
+		echo "################################################################"
+
+	  	sudo apt-get install curl -y
+		  	
+	fi
+
+echo "#################################################"
+echo "Checking and changing all hardcoded icons"
+echo "#################################################"
+
+sudo /tmp/hardcode-fixer/fix.sh
+
+rm -rf /tmp/hardcode-fixer
+
+echo
+echo
+echo "################################################################"
+echo "###################    T H E   E N D      ######################"
 echo "################################################################"

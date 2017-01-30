@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
 # Author 	: 	Erik Dubois
@@ -11,18 +11,12 @@
 #
 ##################################################################################################################
 
-sudo pacman -S --noconfirm --needed pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils bluez-firmware blueberry pavucontrol
+echo "Making sure gnome-screenshot saves in jpg - smaller in kb"
 
-sudo systemctl enable bluetooth.service
-sudo systemctl start bluetooth.service
-sudo systemctl daemon-reload
-
-
-echo "reboot your system then ..."
-echo "set with bluetooth icon in bottom right corner"
-echo "change with pavucontrol to have a2dp sink"
+sh settings/gnome-screenshot/set-gnome-screenshot-to-save-as-jpg.sh
 
 
 echo "################################################################"
-echo "###################    T H E   E N D      ######################"
+echo "#########       gnome-screenshot to jpg         ################"
 echo "################################################################"
+

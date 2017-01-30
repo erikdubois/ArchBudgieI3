@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
 # Author 	: 	Erik Dubois
@@ -11,18 +11,21 @@
 #
 ##################################################################################################################
 
-sudo pacman -S --noconfirm --needed pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils bluez-firmware blueberry pavucontrol
 
-sudo systemctl enable bluetooth.service
-sudo systemctl start bluetooth.service
-sudo systemctl daemon-reload
+echo "Moving files to start i3wm"
+echo "Using Sardi icons, Arc theme and noto font from previous scripts"
 
-
-echo "reboot your system then ..."
-echo "set with bluetooth icon in bottom right corner"
-echo "change with pavucontrol to have a2dp sink"
+cp settings/.bash_profile ~/
+cp settings/.bashrc ~/
+cp settings/.gtkrc-2.0 ~/
+cp settings/.xinitrc ~/
+cp settings/.zlogin ~/
+cp settings/.zshrc ~/
+cp settings/bookmarks ~/.config/gtk-3.0/
+cp settings/settings.ini ~/.config/gtk-3.0/
 
 
 echo "################################################################"
-echo "###################    T H E   E N D      ######################"
+echo "#########      root files copied                ################"
 echo "################################################################"
+

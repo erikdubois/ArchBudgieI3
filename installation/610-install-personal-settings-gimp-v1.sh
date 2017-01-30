@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
 # Author 	: 	Erik Dubois
@@ -11,18 +11,15 @@
 #
 ##################################################################################################################
 
-sudo pacman -S --noconfirm --needed pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils bluez-firmware blueberry pavucontrol
-
-sudo systemctl enable bluetooth.service
-sudo systemctl start bluetooth.service
-sudo systemctl daemon-reload
 
 
-echo "reboot your system then ..."
-echo "set with bluetooth icon in bottom right corner"
-echo "change with pavucontrol to have a2dp sink"
+echo "Copy/pasting gimp scripts and themes"
+
+cp settings/gimp/scripts/* ~/.gimp-2.8/scripts/
+cp -r settings/gimp/themes/* ~/.gimp-2.8/themes/
+
 
 
 echo "################################################################"
-echo "###################    T H E   E N D      ######################"
+echo "#########      gimp scripts and themes copied   ################"
 echo "################################################################"

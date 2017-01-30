@@ -11,18 +11,24 @@
 #
 ##################################################################################################################
 
-sudo pacman -S --noconfirm --needed pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils bluez-firmware blueberry pavucontrol
 
-sudo systemctl enable bluetooth.service
-sudo systemctl start bluetooth.service
-sudo systemctl daemon-reload
+# cleaning tmp
+[ -d /tmp/sardi ] && rm -rf /tmp/sardi
 
+# if there is no hidden folder then make one
+[ -d $HOME"/.icons" ] || mkdir -p $HOME"/.icons"
 
-echo "reboot your system then ..."
-echo "set with bluetooth icon in bottom right corner"
-echo "change with pavucontrol to have a2dp sink"
+wget -O /tmp/sardi.tar.gz "https://sourceforge.net/projects/sardi/files/latest/download?source=files"
+mkdir /tmp/sardi
+tar -zxf /tmp/sardi.tar.gz -C /tmp/sardi
+rm /tmp/sardi.tar.gz
+cp -rf /tmp/sardi/* ~/.icons/
+
+# cleaning tmp
+[ -d /tmp/sardi ] && rm -rf /tmp/sardi
+
 
 
 echo "################################################################"
-echo "###################    T H E   E N D      ######################"
+echo "###################    icons sardi done   ######################"
 echo "################################################################"

@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
 # Author 	: 	Erik Dubois
@@ -11,18 +11,17 @@
 #
 ##################################################################################################################
 
-sudo pacman -S --noconfirm --needed pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils bluez-firmware blueberry pavucontrol
 
-sudo systemctl enable bluetooth.service
-sudo systemctl start bluetooth.service
-sudo systemctl daemon-reload
-
-
-echo "reboot your system then ..."
-echo "set with bluetooth icon in bottom right corner"
-echo "change with pavucontrol to have a2dp sink"
-
+git clone https://github.com/erikdubois/archi3 ~/.config/i3
 
 echo "################################################################"
-echo "###################    T H E   E N D      ######################"
+echo "#########       personal settings installed     ################"
 echo "################################################################"
+
+echo "You can reboot and start computing"
+echo
+echo
+echo "Do not run script 700 yet. You need to start firefox before you do."
+echo
+echo "Type in the terminal the following code"
+echo "sudo reboot"
