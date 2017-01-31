@@ -72,7 +72,7 @@ After the installation of Budgie we want to add i3wm as desktop environment to t
 
 This is documented in this article. 
 
-will follow
+http://erikdubois.be/how-to-install-i3wm-on-arch-linux-budgie/
 
 
 
