@@ -39,14 +39,15 @@
 
 if [ -f linux* ]; then
 	echo "####################################"
-    echo "Stopping the script!!"
-    echo "Wait for the kernel update script to quit."
-    echo "####################################"
-    exit 0
+    	echo "Stopping the script!!"
+    	echo "Wait for the kernel update script to quit."
+    	echo "####################################"
+    	exit 0
 fi
 
-# checking if I have the latest files from github
 
+# checking if I have the latest files from github
+echo "Checking for newer files online first"
 git pull
 
 # Below command will backup everything inside the project folder

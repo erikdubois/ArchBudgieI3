@@ -496,6 +496,8 @@ for_window [class="Spotify"] focus
 
 #Conky
 #exec ~/.config/i3/start-conkys.sh
+#exec conky -c ~/.config/i3/conky-skeleton
+#exec conky -c ~/.config/i3/conky-system-info
 #exec --no-startup-id evolution
 #exec --no-startup-id conky
 
@@ -1022,13 +1024,16 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #Linux Mint
 #exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
+#solus
+#exec budgie-polkit-dialog
+
 # update
 
 #Linux Mint
 #exec mintupdate-launcher
 
 # Arch
-exec pamac-tray
+#exec pamac-tray
 
 # bluetooth
 exec blueberry-tray
@@ -1037,3 +1042,7 @@ exec blueberry-tray
 # network
 #antergos/linux mint
 exec --no-startup-id nm-applet
+
+#install this program for applet
+#exec network-manager-applet
+
