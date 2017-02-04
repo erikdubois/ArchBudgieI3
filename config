@@ -1018,7 +1018,7 @@ exec subl3
 
 #Authentication dialog
 
-#arch budgie
+#arch/antergos
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 #Linux Mint
